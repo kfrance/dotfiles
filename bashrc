@@ -90,3 +90,6 @@ tabs -4
 combine-pdf() { gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=combinedpdf_`date +'%F_%Hh%M'`.pdf -f "$@" ;}
 
 umask 002
+
+# Save history after every command
+export PROMPT_COMMAND='history -a'
