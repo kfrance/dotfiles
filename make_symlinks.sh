@@ -27,3 +27,8 @@ if [ -e ~/.ssh/config ]; then
 	/bin/rm ~/.ssh/config
 fi
 ln -s ~/dotfiles/ssh_config ~/.ssh/config
+
+if [ -e ~/.bash_profile ]; then
+	/bin/rm ~/.bash_profile
+fi
+ln -s ~/dotfiles/bash_profile ~/.bash_profile
