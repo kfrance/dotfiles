@@ -1,0 +1,18 @@
+Host home
+	Hostname kirt.no-ip.org
+	Port 22
+
+Host svw
+	Hostname svw.homelinux.org
+	Port 2200
+
+Host beau.dyndns-home.com
+	Hostname beau.dyndns-home.com
+
+Host beau
+	Hostname 192.168.1.5
+	Port 22
+
+Host shop
+	Hostname 192.168.1.6
+	Port 22

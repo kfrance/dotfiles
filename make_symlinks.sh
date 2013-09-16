@@ -22,3 +22,8 @@ if [ -e ~/.zshrc ]; then
 	/bin/rm ~/.zshrc
 fi
 ln -s ~/dotfiles/zshrc ~/.zshrc
+
+if [ -e ~/.ssh/config ]; then
+	/bin/rm ~/.ssh/config
+fi
+ln -s ~/dotfiles/ssh_config ~/.ssh/config
