@@ -75,7 +75,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # Setup PATH
-export PATH=$PATH:/home/kfrance/bin:/usr/local/bin:/data/stem_features/bin:/data/stem_features/helper_scripts
+export PATH=$PATH:/home/kfrance/bin:/usr/local/bin
 export PYTHONPATH=$PYTHONPATH:/data/my_pymodules
 export GREP_OPTIONS='--color=auto'
 export LD_LIBRARY_PATH=/usr/local/lib:/data/stem_features/bin
