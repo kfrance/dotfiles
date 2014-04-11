@@ -78,7 +78,6 @@ fi
 export PATH=$PATH:/home/kfrance/bin:/usr/local/bin
 export PYTHONPATH=$PYTHONPATH:/data/my_pymodules
 export GREP_OPTIONS='--color=auto'
-export LD_LIBRARY_PATH=/usr/local/lib:/data/stem_features/bin
 
 # Allow core dumps to happen
 ulimit -c 50000
