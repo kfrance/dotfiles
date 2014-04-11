@@ -55,7 +55,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -l'
-if [ $KDE_FULL_SESSION ]; then
+if [ "$DESKTOP_SESSION" == "kde-plasma" ]; then
 	alias rm="trash.sh"
 elif [ "$DESKTOP_SESSION" == "mate" ]; then
 	alias rm="trash"

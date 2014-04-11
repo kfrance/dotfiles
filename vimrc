@@ -91,7 +91,7 @@ noremap j gj
 noremap k gk
 
 " Automatic insert matching braces
-au BufNewFile,BufRead *.c,*.cpp,*.h,*.go inoremap {{ {<cr>}<esc><up>o
+au BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp,*.go inoremap {{ {<cr>}<esc><up>o
 set complete=.,w,b,u,t
 
 " Don't pop up help menu when hitting <F1>

@@ -3,14 +3,14 @@ Host home
 	Port 22
 
 Host svw
-	Hostname svw.homelinux.org
+	Hostname svw.no-ip.org
 	Port 2200
 
 Host beau.dyndns-home.com
 	Hostname beau.dyndns-home.com
 
 Host beau
-	Hostname 192.168.1.5
+	Hostname svw.no-ip.org
 	Port 22
 
 Host shop
