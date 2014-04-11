@@ -40,7 +40,7 @@ autocmd BufReadPost *
 \ endif
 
 "Draw line at character 80 on the screen
-autocmd BufNewFile,BufRead *.cpp,*.c,*.h,*.py,*.pl set cc=80
+autocmd BufNewFile,BufRead *.cpp,*.c,*.h,*.py,*.pl set cc=120
 
 " Fix status bar
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
@@ -129,6 +129,7 @@ au BufNewFile,BufRead *.FCMacro set filetype=python
 
 " set syntax for pde files to arduino
 au BufNewFile,BufRead *.pde set filetype=arduino
+au BufNewFile,BufRead *.ino set filetype=arduino
 
 " Add pathogen stuff
 execute pathogen#infect()
