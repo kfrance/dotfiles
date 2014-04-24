@@ -6,8 +6,8 @@ Host svw
 	Hostname svw.no-ip.org
 	Port 2200
 
-Host beau.dyndns-home.com
-	Hostname beau.dyndns-home.com
+Host beau.hopto.org
+	Hostname beau.hopto.org
 
 Host beau
 	Hostname svw.no-ip.org
