@@ -93,5 +93,3 @@ umask 002
 # Save history after every command
 export PROMPT_COMMAND='history -a'
 
-# z-git completion
-. /usr/lib/z.sh
