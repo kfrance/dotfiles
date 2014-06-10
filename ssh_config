@@ -16,3 +16,11 @@ Host beau
 Host shop
 	Hostname 192.168.1.6
 	Port 22
+
+Host brandon
+	Hostname svw.no-ip.org
+	Port 2203
+
+Host curtis
+	Hostname svw.no-ip.org
+	Port 2202
