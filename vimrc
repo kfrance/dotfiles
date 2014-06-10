@@ -110,7 +110,7 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,preview
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " Turn on persistent undo
 set undodir=~/.vim/undo
