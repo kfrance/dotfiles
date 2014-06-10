@@ -8,6 +8,7 @@ Host svw
 
 Host beau.hopto.org
 	Hostname beau.hopto.org
+	Port 22
 
 Host beau
 	Hostname svw.no-ip.org
