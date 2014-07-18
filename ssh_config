@@ -25,3 +25,8 @@ Host brandon
 Host curtis
 	Hostname svw.no-ip.org
 	Port 2202
+
+Host website
+	Hostname 107.170.229.68
+	User kirt
+	Port 22
