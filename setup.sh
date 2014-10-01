@@ -34,5 +34,7 @@ if [ -e ~/.bash_profile ]; then
 fi
 ln -s ~/dotfiles/bash_profile ~/.bash_profile
 
+chmod 644 ~/dotfiles/ssh_config
+
 # Install trash
 sudo pacman -Sy trash-cli
