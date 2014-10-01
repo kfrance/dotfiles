@@ -55,13 +55,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -l'
-if [ "$DESKTOP_SESSION" == "kde-plasma" ]; then
-	alias rm="trash.sh"
-elif [ "$DESKTOP_SESSION" == "mate" ]; then
-	alias rm="trash"
-else
-	alias rm="echo 'no trash available'"
-fi
+alias rm="trash-put"
 alias psx="ps aux | grep $1"
 export EDITOR=vim
 export TERM=xterm-256color

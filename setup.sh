@@ -1,3 +1,4 @@
+# Setup symbolic links
 if [ -e ~/.vim ]; then
 	/bin/rm -rf ~/.vim
 fi
@@ -32,3 +33,6 @@ if [ -e ~/.bash_profile ]; then
 	/bin/rm ~/.bash_profile
 fi
 ln -s ~/dotfiles/bash_profile ~/.bash_profile
+
+# Install trash
+sudo pacman -Sy trash-cli
