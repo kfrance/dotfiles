@@ -1,5 +1,6 @@
 Host home
 	Hostname kirt.no-ip.org
+	User kfrance
 	Port 22
 
 Host svw
@@ -14,14 +15,17 @@ Host work
 
 Host beau.hopto.org
 	Hostname beau.hopto.org
+	User kfrance
 	Port 22
 
 Host beau
 	Hostname beau-work
+	User kfrance
 	Port 22
 
 Host curtis
 	Hostname curtis-work
+	User kfrance
 	Port 22
 
 Host website
