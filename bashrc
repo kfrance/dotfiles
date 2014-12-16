@@ -57,6 +57,7 @@ fi
 alias ll='ls -l'
 alias rm="trash-put"
 alias psx="ps aux | grep $1"
+alias grep="/usr/bin/grep --color=auto"
 export EDITOR=vim
 export TERM=xterm-256color
 set -o vi
@@ -71,7 +72,6 @@ fi
 # Setup PATH
 export PATH=$PATH:/home/kfrance/bin:/usr/local/bin
 export PYTHONPATH=$PYTHONPATH:/data/my_pymodules
-export GREP_OPTIONS='--color=auto'
 
 # Allow core dumps to happen
 ulimit -c 50000
