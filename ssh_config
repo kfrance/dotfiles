@@ -3,7 +3,7 @@ Host home
 	User kfrance
 	Port 22
 
-Host svw
+Host hub
 	Hostname svw.no-ip.org
 	User svw
 	Port 2200
