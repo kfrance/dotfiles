@@ -55,7 +55,6 @@ fi
 
 # some more ls aliases
 alias ll='ls -l'
-alias rm="trash-put"
 alias psx="ps aux | grep $1"
 alias grep="/usr/bin/grep --color=auto"
 export EDITOR=vim
