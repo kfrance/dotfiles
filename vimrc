@@ -135,3 +135,6 @@ au BufNewFile,BufRead *.ino set filetype=arduino
 execute pathogen#infect()
 
 let g:snips_trigger_key="<c-j>"
+
+" By default highlighted text is placed in the * register
+set clipboard=unnamedplus
