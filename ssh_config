@@ -3,12 +3,12 @@ Host home
 	User kfrance
 	Port 22
 
-Host hub
+Host svw
 	Hostname svw.no-ip.org
 	User svw
 	Port 2200
 
-Host work
+Host kirt-work
 	Hostname 10.10.10.10
 	User kfrance
 	Port 22
@@ -18,12 +18,12 @@ Host beau.hopto.org
 	User kfrance
 	Port 22
 
-Host beau
+Host beau-work
 	Hostname beau-work
 	User kfrance
 	Port 22
 
-Host curtis
+Host curtis-work
 	Hostname curtis-work
 	User kfrance
 	Port 22
@@ -32,3 +32,8 @@ Host website
 	Hostname 107.170.229.68
 	User kirt
 	Port 22
+
+Host repo-manager
+	Hostname 54.148.225.127
+	User root
+	IdentityFile "~/.ssh/hub.pem"
