@@ -37,3 +37,8 @@ Host repo-manager
 	Hostname 54.148.225.127
 	User root
 	IdentityFile "~/.ssh/hub.pem"
+
+Host hub
+	Hostname 10.10.10.2
+	User svw
+	Port 2200
