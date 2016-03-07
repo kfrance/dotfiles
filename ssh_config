@@ -39,6 +39,39 @@ Host repo-manager
 	IdentityFile "~/.ssh/hub.pem"
 
 Host hub
-	Hostname 10.10.10.2
+	Hostname hub.local.svw
 	User svw
-	Port 2200
+	Port 22
+
+Host spiderman
+	Hostname spiderman.local.svw
+	User svw
+	Port 22
+
+Host repo
+	Hostname repo.local.svw
+	User root
+
+Host vpn
+	Hostname vpn.local.svw
+	User root
+
+Host mininet
+	User mininet
+	Hostname localhost
+	Port 3022
+
+Host 1010
+	User svw
+	port 2200
+	Hostname 1010.ops.laitram
+
+Host 1011
+	User svw
+	port 2200
+	Hostname 1011.ops.laitram
+
+Host 1017
+	User svw
+	port 22
+	Hostname 1017.ops.laitram
