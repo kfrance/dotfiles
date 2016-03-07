@@ -3,13 +3,13 @@ syntax on
 set mouse=a
 map <F2> :w<CR>
 set incsearch
+filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set number
 set ignorecase " This has to be set for smartcase to work
 set smartcase
 set lbr "word wraps on word rather than characters
-filetype plugin indent on
 set vb t_vb= " turn off audible bell
 
 
@@ -32,6 +32,8 @@ autocmd BufNewFile,BufRead *.m set filetype=matlab
 " Load syntax for scons
 autocmd BufNewFile,BufRead SConstruct set filetype=python
 autocmd BufNewFile,BufRead SConscript set filetype=python
+autocmd BufNewFile,BufRead SConstruct set noexpandtab
+autocmd BufNewFile,BufRead SConscript set noexpandtab
 
 " Go to same line last time I edited the file
 autocmd BufReadPost *
@@ -91,7 +93,7 @@ noremap j gj
 noremap k gk
 
 " Automatic insert matching braces
-au BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp,*.go inoremap {{ {<cr>}<esc><up>o
+au BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp,*.go,*.qml inoremap {{ {<cr>}<esc><up>o
 set complete=.,w,b,u,t
 
 " Don't pop up help menu when hitting <F1>
@@ -138,3 +140,5 @@ let g:snips_trigger_key="<c-j>"
 
 " By default highlighted text is placed in the * register
 set clipboard=unnamedplus
+
+autocmd BufNewFile,BufRead *.cpp,*.c,*.h,*.py set noexpandtab
