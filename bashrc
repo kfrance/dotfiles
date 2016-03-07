@@ -21,8 +21,8 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-if [ "$HOSTNAME" == "kfrance-work" ]; then
-	PS1="\[\e[33;40m\]\h | \[\e[36;40m\]\W]\[\e[0m\]"
+if [ $(id -u) -eq 0 ]; then
+	PS1="\[\e[91;40m\]#\h | \[\e[36;40m\]\W]\[\e[0m\]"
 else
 	PS1="\[\e[36;40m\]\h | \[\e[32;40m\]\W]\[\e[0m\]"
 fi
@@ -85,4 +85,3 @@ umask 002
 
 # Save history after every command
 export PROMPT_COMMAND='history -a'
-
