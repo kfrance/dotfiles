@@ -21,10 +21,11 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
+TITLEBAR='\[\033]2;\u@\h\007\]'
 if [ $(id -u) -eq 0 ]; then
-	PS1="\[\e[91;40m\]#\h | \[\e[36;40m\]\W]\[\e[0m\]"
+	PS1="${TITLEBAR}\[\e[91;40m\]#\h | \[\e[36;40m\]\W]\[\e[0m\]"
 else
-	PS1="\[\e[36;40m\]\h | \[\e[32;40m\]\W]\[\e[0m\]"
+	PS1="${TITLEBAR}\[\e[36;40m\]\h | \[\e[32;40m\]\W]\[\e[0m\]"
 fi
 
 # If this is an xterm set the title to user@host:dir
