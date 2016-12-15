@@ -142,3 +142,5 @@ let g:snips_trigger_key="<c-j>"
 set clipboard=unnamedplus
 
 autocmd BufNewFile,BufRead *.cpp,*.c,*.h,*.py set noexpandtab
+
+let NERDTreeIgnore = ['^moc_*', '*.o$']

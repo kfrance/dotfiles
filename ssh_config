@@ -1,3 +1,5 @@
+ForwardX11 yes
+
 Host home
 	Hostname kirt.no-ip.org
 	User kfrance
@@ -19,13 +21,13 @@ Host beau.hopto.org
 	Port 22
 
 Host beau-work
-	Hostname beau-work
+	Hostname beau
 	User kfrance
 	Port 22
 
-Host curtis-work
-	Hostname curtis-work
-	User kfrance
+Host docker-server
+	Hostname docker-server
+	User root
 	Port 22
 
 Host website
@@ -45,7 +47,7 @@ Host hub
 
 Host spiderman
 	Hostname spiderman.local.svw
-	User svw
+	User root
 	Port 22
 
 Host repo
@@ -61,6 +63,26 @@ Host mininet
 	Hostname localhost
 	Port 3022
 
+Host 1001
+	User svw
+	port 2200
+	Hostname 1001.ops.laitram
+
+Host 1002
+	User svw
+	port 2200
+	Hostname 1002.ops.laitram
+
+Host 1004
+	User svw
+	port 2200
+	Hostname 1004.ops.laitram
+
+Host 1006
+	User svw
+	port 2200
+	Hostname 1006.ops.laitram
+
 Host 1010
 	User svw
 	port 2200
@@ -71,7 +93,32 @@ Host 1011
 	port 2200
 	Hostname 1011.ops.laitram
 
+Host 1013
+	User svw
+	port 22
+	Hostname 1013.ops.laitram
+
+Host 1016
+	User svw
+	port 2200
+	Hostname 1016.ops.laitram
+
 Host 1017
 	User svw
 	port 22
 	Hostname 1017.ops.laitram
+
+Host 1019
+	User svw
+	port 2200
+	Hostname 1019.ops.laitram
+
+Host 1025
+	User svw
+	port 2200
+	Hostname 1025.ops.laitram
+
+Host 1026
+	User svw
+	port 2200
+	Hostname 1026.ops.laitram

@@ -62,6 +62,11 @@ export EDITOR=vim
 export TERM=xterm-256color
 set -o vi
 
+# Function that could be an alias but I couldn't get the quotes right
+docker_rm_stopped() {
+	docker ps -a | grep Exited | awk '{print $1}' | xargs --no-run-if-empty docker rm
+}
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -70,7 +75,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # Setup PATH
-export PATH=$PATH:/home/kfrance/bin:/usr/local/bin
+export PATH=$PATH:$HOME/bin:/usr/local/bin
 export PYTHONPATH=$PYTHONPATH:/data/my_pymodules
 
 # Allow core dumps to happen
@@ -86,3 +91,10 @@ umask 002
 
 # Save history after every command
 export PROMPT_COMMAND='history -a'
+
+export GOPATH=/data/go
+export PATH=$PATH:/data/go/bin
+export LD_LIBRARY_PATH=/usr/local/lib
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+export HISTSIZE=5000
+export HISTFILESIZE=5000
