@@ -11,6 +11,7 @@ set ignorecase " This has to be set for smartcase to work
 set smartcase
 set lbr "word wraps on word rather than characters
 set vb t_vb= " turn off audible bell
+set modeline
 
 
 " To show tabs and spaces you can use this command: set list listchars=tab:»·,trail:·
@@ -32,8 +33,6 @@ autocmd BufNewFile,BufRead *.m set filetype=matlab
 " Load syntax for scons
 autocmd BufNewFile,BufRead SConstruct set filetype=python
 autocmd BufNewFile,BufRead SConscript set filetype=python
-autocmd BufNewFile,BufRead SConstruct set noexpandtab
-autocmd BufNewFile,BufRead SConscript set noexpandtab
 
 " Go to same line last time I edited the file
 autocmd BufReadPost *
@@ -141,6 +140,6 @@ let g:snips_trigger_key="<c-j>"
 " By default highlighted text is placed in the * register
 set clipboard=unnamedplus
 
-autocmd BufNewFile,BufRead *.cpp,*.c,*.h,*.py set noexpandtab
+autocmd BufNewFile,BufRead *.cpp,*.c,*.h set noexpandtab
 
 let NERDTreeIgnore = ['^moc_*', '*.o$']

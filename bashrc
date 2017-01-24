@@ -57,7 +57,7 @@ fi
 # some more ls aliases
 alias ll='ls -l'
 alias psx="ps aux | grep $1"
-alias grep="/usr/bin/grep --color=auto"
+alias grep="/bin/grep --color=auto"
 export EDITOR=vim
 export TERM=xterm-256color
 set -o vi
