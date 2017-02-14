@@ -19,6 +19,6 @@
 [submodule "vim/bundle/histwin"]
 	path = vim/bundle/histwin
 	url = https://github.com/chrisbra/histwin.vim.git
-[submodule "vim/bundle/vim-ansible-yaml"]
-	path = vim/bundle/vim-ansible-yaml
-	url = git://github.com/chase/vim-ansible-yaml.git
+[submodule "vim/bundle/ansible-vim"]
+	path = vim/bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
