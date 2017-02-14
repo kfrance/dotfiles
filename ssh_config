@@ -1,4 +1,6 @@
 ForwardX11 yes
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
 
 Host home
 	Hostname kirt.no-ip.org
@@ -30,6 +32,11 @@ Host docker-server
 	User root
 	Port 22
 
+Host aptly
+	Hostname docker-server
+	User root
+	Port 2200
+
 Host website
 	Hostname 107.170.229.68
 	User kirt
@@ -40,16 +47,6 @@ Host repo-manager
 	User root
 	IdentityFile "~/.ssh/hub.pem"
 
-Host hub
-	Hostname hub.local.svw
-	User svw
-	Port 22
-
-Host spiderman
-	Hostname spiderman.local.svw
-	User root
-	Port 22
-
 Host repo
 	Hostname repo.local.svw
 	User root
@@ -57,11 +54,6 @@ Host repo
 Host vpn
 	Hostname vpn.local.svw
 	User root
-
-Host mininet
-	User mininet
-	Hostname localhost
-	Port 3022
 
 Host 1001
 	User svw
