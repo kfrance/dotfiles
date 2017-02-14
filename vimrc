@@ -143,3 +143,5 @@ set clipboard=unnamedplus
 autocmd BufNewFile,BufRead *.cpp,*.c,*.h set noexpandtab
 
 let NERDTreeIgnore = ['^moc_*', '*.o$']
+
+let g:nerdtree_tabs_open_on_gui_startup=2
