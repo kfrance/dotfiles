@@ -148,3 +148,7 @@ let g:nerdtree_tabs_open_on_gui_startup=2
 
 " Load ansible-vim for any yaml files
 autocmd BufRead,BufNewFile *.yml,*.yaml set ft=ansible
+
+" Settings for clang-format
+g:clang_format#detect_style_file
+g:clang_format#auto_format

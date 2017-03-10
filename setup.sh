@@ -32,7 +32,7 @@ ln -s dotfiles/bashrc .bashrc
 
 ln -s dotfiles/zshrc .zshrc
 
-ln -s dotfiles/ssh_config .ssh/config
+ln -s ../dotfiles/ssh_config .ssh/config
 
 ln -s dotfiles/bash_profile .bash_profile
 
