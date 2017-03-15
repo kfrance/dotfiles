@@ -150,5 +150,9 @@ let g:nerdtree_tabs_open_on_gui_startup=2
 autocmd BufRead,BufNewFile *.yml,*.yaml set ft=ansible
 
 " Settings for clang-format
-let g:clang_format#detect_style_file=1
-let g:clang_format#auto_format=1
+function! ClangFormatFile()
+  let l:lines="all"
+  py3f ~/dotfiles/clang-format.py
+endfunction
+map <C-I> :call ClangFormatFile()<cr>
+au BufWrite *.cpp,*.h,*.hpp call ClangFormatFile()
