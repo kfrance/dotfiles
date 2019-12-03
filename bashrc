@@ -28,6 +28,10 @@ else
 	PS1="${TITLEBAR}\[\e[36;40m\]\h | \[\e[32;40m\]\W]\[\e[0m\]"
 fi
 
+if [ $IN_DOCKER ]; then
+	PS1="\[\033[38;5;166;48;5;240m\]DOCKER | \[\033[38;5;111;48;5;240m\]\W]\[\033[m\]"
+fi
+
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
@@ -79,7 +83,7 @@ export PATH=$PATH:$HOME/bin:/usr/local/bin
 export PYTHONPATH=$PYTHONPATH:/data/my_pymodules
 
 # Allow core dumps to happen
-ulimit -c 50000
+ulimit -s 50000
 
 # Set tab every 4th column
 tabs -4
@@ -98,3 +102,5 @@ export LD_LIBRARY_PATH=/usr/local/lib
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export HISTSIZE=5000
 export HISTFILESIZE=5000
+
+. /etc/profile.d/vte.sh
