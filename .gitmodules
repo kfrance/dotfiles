@@ -28,3 +28,21 @@
 [submodule "vim/bundle/vim-clang-format"]
 	path = vim/bundle/vim-clang-format
 	url = https://github.com/rhysd/vim-clang-format.git
+[submodule "vim/vim-json"]
+	path = vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
+[submodule "vim/bundle/vim-rainbow"]
+	path = vim/bundle/vim-rainbow
+	url = https://github.com/frazrepo/vim-rainbow.git
+[submodule "vim/bundle/ack.vim"]
+	path = vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/vim-buffergator"]
+	path = vim/bundle/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator.git
