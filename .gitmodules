@@ -46,3 +46,6 @@
 [submodule "vim/bundle/vim-buffergator"]
 	path = vim/bundle/vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "vim/bundle/vim-fswitch"]
+	path = vim/bundle/vim-fswitch
+	url = https://github.com/derekwyatt/vim-fswitch.git

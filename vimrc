@@ -155,19 +155,13 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Search for files
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'c'
-"let g:ctrlp_custom_ignore = {
-"  \ 'dir':  '\v[\/]\.(git|hg|svn|python-venv)$',
-"  \ 'file': '\v\.(o|so|zip|tar)$',
-"  \ 'link': 'some_bad_symbolic_links',
-"  \ }
+let g:ctrlp_working_path_mode = '0'
 nmap <leader>p :CtrlP<cr>
 nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 
 " Deal with buffers better
-nmap <leader>bo :BuffergatorOpen<cr>
 nmap <leader>jj :BuffergatorMruCyclePrev<cr>
 nmap <leader>kk :BuffergatorMruCycleNext<cr>
 let g:buffergator_autoexpand_on_split=0
@@ -175,3 +169,4 @@ let g:buffergator_autoexpand_on_split=0
 " make vertical splits the default for diff commands
 set diffopt=vertical
 
+map <Leader>a :Ack! ''<Left>
