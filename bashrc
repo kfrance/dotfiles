@@ -103,4 +103,6 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export HISTSIZE=5000
 export HISTFILESIZE=5000
 
-. /etc/profile.d/vte.sh
+export VTE_SH=/etc/profile.d/vte.sh
+[ -s $VTE_SH ] &&  \. $VTE_SH
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
