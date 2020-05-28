@@ -12,6 +12,7 @@ set smartcase
 set lbr "word wraps on word rather than characters
 set vb t_vb= " turn off audible bell
 set modeline
+set guifont=Monospace\ 14
 
 
 " To show tabs and spaces you can use this command: set list listchars=tab:»·,trail:·
@@ -74,19 +75,6 @@ au BufEnter *.tex set noautoindent
 " set syntax for cu files to c
 au BufNewFile,BufRead *.cu set filetype=c
 
-" set filetype for viki files
-let g:vikiNameSuffix=".viki"
-let g:vikiNoIndent="blah"
-au BufRead,BufNewFile *.viki set ft=viki
-au BufRead,BufNewFile *.viki set tw=72
-au BufRead,BufNewFile *.viki set fo=tqaw
-au BufRead,BufNewFile *.viki set noet
-au BufRead,BufNewFile *.viki set autoindent
-au BufRead,BufNewFile *.viki imap <F3> <c-v>u2023
-au BufRead,BufNewFile *.viki imap <F2> <c-v>u2022
-au BufRead,BufNewFile *.viki imap <F4> <c-v>u2218
-au BufRead,BufNewFile *.viki set guifont=Monospace\ 14
-
 " Map movement keys to do visual movements
 noremap j gj
 noremap k gk
@@ -147,9 +135,6 @@ autocmd BufRead,BufNewFile *.yml,*.yaml set ft=ansible
 
 autocmd FileType cpp ClangFormatAutoEnable
 
-" Different colors for brackets
-let g:rainbow_active=1
-
 " For grep search in vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -170,3 +155,5 @@ let g:buffergator_autoexpand_on_split=0
 set diffopt=vertical
 
 map <Leader>a :Ack! ''<Left>
+
+let g:vim_json_syntax_conceal = 0

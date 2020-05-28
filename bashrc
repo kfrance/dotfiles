@@ -96,8 +96,6 @@ umask 002
 # Save history after every command
 export PROMPT_COMMAND='history -a'
 
-export GOPATH=/data/go
-export PATH=$PATH:/data/go/bin
 export LD_LIBRARY_PATH=/usr/local/lib
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export HISTSIZE=5000

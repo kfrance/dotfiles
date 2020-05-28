@@ -28,9 +28,6 @@
 [submodule "vim/vim-json"]
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
-[submodule "vim/bundle/vim-rainbow"]
-	path = vim/bundle/vim-rainbow
-	url = https://github.com/frazrepo/vim-rainbow.git
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
