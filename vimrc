@@ -154,6 +154,11 @@ let g:buffergator_autoexpand_on_split=0
 " make vertical splits the default for diff commands
 set diffopt=vertical
 
-map <Leader>a :Ack! ''<Left>
+map <Leader>a :Ack! -S ''<Left>
 
 let g:vim_json_syntax_conceal = 0
+
+autocmd BufNewFile,BufRead *.js set expandtab
+
+" format with goimports instead of gofmt
+let g:go_fmt_command = "goimports"

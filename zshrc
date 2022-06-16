@@ -60,3 +60,8 @@ export TERM=xterm-256color
 
 # z completion for cd - https://github.com/rupa/z
 . /etc/profile.d/z.sh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+complete -o nospace -C /usr/bin/vault vault

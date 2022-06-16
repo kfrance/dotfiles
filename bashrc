@@ -21,11 +21,14 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-TITLEBAR='\[\033]2;\u@\h\007\]'
+#TITLEBAR="\[\033]2;\u@\h\007\]"
+parse_git_branch() {
+	git branch 2> //dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 if [ $(id -u) -eq 0 ]; then
-	PS1="${TITLEBAR}\[\e[91;40m\]#\h | \[\e[36;40m\]\W]\[\e[0m\]"
+	PS1='${TITLEBAR}\[\e[91;40m\]#\h | \[\e[36;40m\]\W]\[\e[0m\]'
 else
-	PS1="${TITLEBAR}\[\e[36;40m\]\h | \[\e[32;40m\]\W]\[\e[0m\]"
+	PS1='\[\e[36;40m\]\h | \[\e[32;40m\]\W$(__git_ps1)]\[\e[0m\]'
 fi
 
 if [ $IN_DOCKER ]; then
@@ -64,6 +67,8 @@ alias psx="ps aux | grep $1"
 alias grep="/bin/grep --color=auto"
 export EDITOR=vim
 export TERM=xterm-256color
+alias bsai="conda activate balena-sai"
+alias subup="git submodule update --recursive --init"
 set -o vi
 
 # Function that could be an alias but I couldn't get the quotes right
@@ -103,4 +108,30 @@ export HISTFILESIZE=5000
 
 export VTE_SH=/etc/profile.d/vte.sh
 [ -s $VTE_SH ] &&  \. $VTE_SH
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/kfrance/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/kfrance/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/kfrance/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/kfrance/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+complete -C /usr/bin/terraform terraform
+
+complete -C /usr/bin/vault vault
+
+export PYTHONNOUSERSITE=True
+
+source ~/.git-prompt.sh
+
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="/home/kfrance/.cargo/bin:$PATH"
