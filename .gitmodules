@@ -43,3 +43,6 @@
 [submodule "vim/bundle/vim-fswitch"]
 	path = vim/bundle/vim-fswitch
 	url = https://github.com/derekwyatt/vim-fswitch.git
+[submodule "vim/bundle/vim-terraform"]
+	path = vim/bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
