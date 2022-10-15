@@ -5,9 +5,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoredups
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -69,6 +66,7 @@ export EDITOR=vim
 export TERM=xterm-256color
 alias bsai="conda activate balena-sai"
 alias subup="git submodule update --recursive --init"
+alias analytics='mongosh "mongodb+srv://analytics.6chxf.mongodb.net/myFirstDatabase" --apiVersion 1 --username kirt'
 set -o vi
 
 # Function that could be an alias but I couldn't get the quotes right
@@ -84,7 +82,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # Setup PATH
-export PATH=$PATH:$HOME/bin:/usr/local/bin
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/data/svw_cli:/opt/balena-cli:/usr/local/go/bin
 export PYTHONPATH=$PYTHONPATH:/data/my_pymodules
 
 # Allow core dumps to happen
@@ -133,5 +131,12 @@ export PYTHONNOUSERSITE=True
 
 source ~/.git-prompt.sh
 
-export PATH="/usr/local/go/bin:$PATH"
-export PATH="/home/kfrance/.cargo/bin:$PATH"
+# Better bash history
+PROMPT_COMMAND='history -a'
+shopt -s histappend
+HISTFILESIZE=1000000
+HISTCONTROL=ignoreboth
+
+# Bash completion for svw-cli
+source setup_bash_completion.sh
+conda activate svw_cli
