@@ -140,3 +140,4 @@ HISTCONTROL=ignoreboth
 # Bash completion for svw-cli
 source setup_bash_completion.sh
 conda activate svw_cli
+complete -cf sudo

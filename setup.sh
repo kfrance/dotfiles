@@ -1,6 +1,6 @@
 # Setup symbolic links
-if [ -e ~/.vim ]; then
-	/bin/rm -rf ~/.vim
+if [ -e ~/.config/nvim/vim ]; then
+	/bin/rm -rf ~/.config/nvim
 fi
 if [ -e ~/.vimrc ]; then
 	/bin/rm ~/.vimrc
@@ -14,26 +14,22 @@ fi
 if [ -e ~/.zshrc ]; then
 	/bin/rm ~/.zshrc
 fi
-if [ -e ~/.ssh/config ]; then
-	/bin/rm ~/.ssh/config
-fi
 if [ -e ~/.bash_profile ]; then
 	/bin/rm ~/.bash_profile
 fi
-cd ~
+if [ -e ~/.git-prompt.sh ]; then
+	/bin/rm ~/.git-prompt.sh
+fi
 
-ln -s dotfiles/vim .vim
+#ln -s $HOME/dotfiles/vim $HOME/.vim
+ln -s $HOME/dotfiles/vim $HOME/.config/nvim
+ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
+ln -s $HOME/dotfiles/gvimrc $HOME/.gvimrc
+ln -s $HOME/dotfiles/bashrc $HOME/.bashrc
+ln -s $HOME/dotfiles/zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/bash_profile $HOME/.bash_profile
+ln -s $HOME/dotfiles/git-prompt.sh $HOME/.git-prompt.sh
 
-ln -s dotfiles/vimrc .vimrc
-
-ln -s dotfiles/gvimrc .gvimrc
-
-ln -s dotfiles/bashrc .bashrc
-
-ln -s dotfiles/zshrc .zshrc
-
-ln -s ../dotfiles/ssh_config .ssh/config
-
-ln -s dotfiles/bash_profile .bash_profile
-
-chmod 644 ~/dotfiles/ssh_config
+if [[ ! -d "/usr/share/nvim/site/pack/packer" ]] || [[ ! -d "$HOME/.local/share/nvim/site/pack/packer" ]]; then
+	echo "Packer not installed. See https://github.com/wbthomason/packer.nvim"
+fi

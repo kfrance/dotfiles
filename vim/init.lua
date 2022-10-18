@@ -1,6 +1,5 @@
 local opt = vim.opt
-print("hello from lua")
-vim.cmd 'source ~/.config/nvim/unconverted.vim'
+--vim.cmd 'source ~/.config/nvim/unconverted.vim'
 
 opt.incsearch = true   -- incremental search
 opt.modeline = true    -- allows us to set variables specific to a file in the file
