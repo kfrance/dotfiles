@@ -7,6 +7,7 @@ require('packer').startup(function()
   use 'ggandor/leap.nvim'          -- Motion plugin
   use 'williamboman/mason.nvim'    -- Manage  LSP servers
   use 'tpope/vim-commentary'       -- Comment code out
+  use 'ibhagwan/smartyank.nvim'    -- Copy over ssh
   use 'neovim/nvim-lspconfig'
 
   -- Completion Engine
@@ -25,6 +26,7 @@ end)
 -- Configure leap
 require('leap').set_default_keymaps()
 
+-- Setup clangd
 require("lspconfig").clangd.setup({})
 
 -- Configure mason
