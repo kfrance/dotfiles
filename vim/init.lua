@@ -1,5 +1,5 @@
 local opt = vim.opt
---vim.cmd 'source ~/.config/nvim/unconverted.vim'
+vim.cmd 'source ~/.config/nvim/unconverted.vim'
 
 opt.incsearch = true   -- incremental search
 opt.modeline = true    -- allows us to set variables specific to a file in the file
@@ -21,3 +21,10 @@ vim.g.ackprg = 'ag --nogroup --nocolor --column'
 vim.opt.clipboard:append { 'unnamedplus' }
 
 require('plugins')
+
+-- Config for telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

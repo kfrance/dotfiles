@@ -9,6 +9,10 @@ require('packer').startup(function()
   use 'tpope/vim-commentary'       -- Comment code out
   use 'ibhagwan/smartyank.nvim'    -- Copy over ssh
   use 'neovim/nvim-lspconfig'
+  use {
+		  'nvim-telescope/telescope.nvim', branch = '0.1.x',
+		  requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   -- Completion Engine
   use { "onsails/lspkind-nvim", event = "VimEnter" }
@@ -23,11 +27,12 @@ require('packer').startup(function()
   use { "hrsh7th/vim-vsnip", after = "nvim-cmp" }
 end)
 
--- Configure leap
-require('leap').set_default_keymaps()
-
 -- Setup clangd
 require("lspconfig").clangd.setup({})
+
+-- Configure leap
+require('leap').set_default_keymaps()
+require('leap').opts.safe_labels = {}
 
 -- Configure mason
 require("mason").setup()

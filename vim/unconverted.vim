@@ -123,9 +123,6 @@ autocmd FileType cpp ClangFormatAutoEnable
 
 
 " Search for files
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = '0'
-nmap <leader>p :CtrlP<cr>
 nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
