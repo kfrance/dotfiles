@@ -67,6 +67,7 @@ export TERM=xterm-256color
 alias bsai="conda activate balena-sai"
 alias subup="git submodule update --recursive --init"
 alias analytics='mongosh "mongodb+srv://analytics.6chxf.mongodb.net/myFirstDatabase" --apiVersion 1 --username kirt'
+alias pipeline='mongosh "mongodb+srv://cluster0.ydvfu.mongodb.net/myFirstDatabase" --apiVersion 1 --username kirt'
 set -o vi
 
 # Function that could be an alias but I couldn't get the quotes right
@@ -83,7 +84,7 @@ fi
 
 # Setup PATH
 export PATH=$PATH:$HOME/bin:/usr/local/bin:/data/svw_cli:/opt/balena-cli:/usr/local/go/bin
-export PYTHONPATH=$PYTHONPATH:/data/my_pymodules
+export PYTHONPATH=$PYTHONPATH:/data/labeling_pipeline/labeling_pipeline:
 
 # Allow core dumps to happen
 ulimit -s 50000
