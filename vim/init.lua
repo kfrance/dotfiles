@@ -28,3 +28,8 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Use colorscheme
+vim.cmd 'set t_Co=256'
+vim.cmd 'set background=dark'
+vim.cmd 'colorscheme PaperColor'

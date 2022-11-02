@@ -1,3 +1,4 @@
 vim/undo/*
 .*.swp
 .netrwhist
+vim/plugin/packer_compiled.lua

@@ -14,6 +14,10 @@ require('packer').startup(function()
 		  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Color schemes
+  use 'dhruvasagar/vim-railscasts-theme'
+  use 'NLKNguyen/papercolor-theme'
+
   -- Completion Engine
   use { "onsails/lspkind-nvim", event = "VimEnter" }
   use { "hrsh7th/nvim-cmp", after = "lspkind-nvim", config = [[require('config.nvim-cmp')]] }
