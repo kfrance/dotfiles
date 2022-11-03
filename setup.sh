@@ -1,5 +1,5 @@
 # Setup symbolic links
-if [ -e ~/.config/nvim/vim ]; then
+if [ -e ~/.config/nvim ]; then
 	/bin/rm -rf ~/.config/nvim
 fi
 if [ -e ~/.vimrc ]; then
@@ -21,7 +21,6 @@ if [ -e ~/.git-prompt.sh ]; then
 	/bin/rm ~/.git-prompt.sh
 fi
 
-#ln -s $HOME/dotfiles/vim $HOME/.vim
 ln -s $HOME/dotfiles/vim $HOME/.config/nvim
 ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/gvimrc $HOME/.gvimrc
@@ -33,3 +32,6 @@ ln -s $HOME/dotfiles/git-prompt.sh $HOME/.git-prompt.sh
 if [[ ! -d "/usr/share/nvim/site/pack/packer" ]] || [[ ! -d "$HOME/.local/share/nvim/site/pack/packer" ]]; then
 	echo "Packer not installed. See https://github.com/wbthomason/packer.nvim"
 fi
+
+eval "$(conda shell.bash hook)"
+conda activate vim || conda env create --name vim --file "$(dirname "$0")/vim_environment.yml" && conda activate vim

@@ -33,3 +33,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.cmd 'set t_Co=256'
 vim.cmd 'set background=dark'
 vim.cmd 'colorscheme PaperColor'
+
+-- Python in a conda environment
+vim.g.python3_host_prod = '/home/kfrance/miniconda3/envs/vim/bin/python'

@@ -1,27 +1,15 @@
-[submodule "vim/bundle/viki"]
-	path = vim/bundle/viki
-	url = https://github.com/tomtom/viki_vim.git
-[submodule "vim/bundle/tlib"]
-	path = vim/bundle/tlib
-	url = https://github.com/tomtom/tlib_vim.git
 [submodule "vim/bundle/vim-qml"]
 	path = vim/bundle/vim-qml
 	url = git://github.com/peterhoeg/vim-qml.git
 [submodule "vim/bundle/vim-css3-syntax"]
 	path = vim/bundle/vim-css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
-[submodule "vim/bundle/vim-clang-format"]
-	path = vim/bundle/vim-clang-format
-	url = https://github.com/rhysd/vim-clang-format.git
 [submodule "vim/vim-json"]
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/bundle/vim-buffergator"]
-	path = vim/bundle/vim-buffergator
-	url = https://github.com/jeetsukumaran/vim-buffergator.git
 [submodule "vim/bundle/vim-fswitch"]
 	path = vim/bundle/vim-fswitch
 	url = https://github.com/derekwyatt/vim-fswitch.git

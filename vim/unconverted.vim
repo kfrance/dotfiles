@@ -121,12 +121,6 @@ autocmd BufRead,BufNewFile *.yml,*.yaml set ft=ansible
 
 autocmd FileType cpp ClangFormatAutoEnable
 
-
-" Search for files
-nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>bm :CtrlPMixed<cr>
-nmap <leader>bs :CtrlPMRU<cr>
-
 " Deal with buffers better
 nmap <leader>jj :BuffergatorMruCyclePrev<cr>
 nmap <leader>kk :BuffergatorMruCycleNext<cr>

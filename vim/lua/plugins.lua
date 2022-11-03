@@ -9,11 +9,17 @@ require('packer').startup(function()
   use 'tpope/vim-commentary'       -- Comment code out
   use 'ibhagwan/smartyank.nvim'    -- Copy over ssh
   use 'neovim/nvim-lspconfig'
+
+  -- Telescope is a fuzzy finder for different things
   use {
 		  'nvim-telescope/telescope.nvim', branch = '0.1.x',
 		  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'lukas-reineke/indent-blankline.nvim' -- Show a line to indicate indention
+  use 'chrisbra/histwin.vim'                -- Look at edit history
+  use 'stevearc/gkeep.nvim'                 -- Edit Google keep notes in vim
+  use 'jeetsukumaran/vim-buffergator'       -- Navigate between buffers
+  use 'rhysd/vim-clang-format'              -- Format cpp files with clang
 
   -- Color schemes
   use 'dhruvasagar/vim-railscasts-theme'

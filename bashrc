@@ -68,6 +68,7 @@ alias bsai="conda activate balena-sai"
 alias subup="git submodule update --recursive --init"
 alias analytics='mongosh "mongodb+srv://analytics.6chxf.mongodb.net/myFirstDatabase" --apiVersion 1 --username kirt'
 alias pipeline='mongosh "mongodb+srv://cluster0.ydvfu.mongodb.net/myFirstDatabase" --apiVersion 1 --username kirt'
+alias vim='conda activate vim && vim'
 set -o vi
 
 # Function that could be an alias but I couldn't get the quotes right
