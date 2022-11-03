@@ -1,6 +1,3 @@
-[submodule "vim/bundle/OmniCppComplete"]
-	path = vim/bundle/OmniCppComplete
-	url = https://github.com/vim-scripts/OmniCppComplete.git
 [submodule "vim/bundle/viki"]
 	path = vim/bundle/viki
 	url = https://github.com/tomtom/viki_vim.git
@@ -10,12 +7,6 @@
 [submodule "vim/bundle/vim-qml"]
 	path = vim/bundle/vim-qml
 	url = git://github.com/peterhoeg/vim-qml.git
-[submodule "vim/bundle/histwin"]
-	path = vim/bundle/histwin
-	url = https://github.com/chrisbra/histwin.vim.git
-[submodule "vim/bundle/ansible-vim"]
-	path = vim/bundle/ansible-vim
-	url = https://github.com/pearofducks/ansible-vim
 [submodule "vim/bundle/vim-css3-syntax"]
 	path = vim/bundle/vim-css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
@@ -25,9 +16,6 @@
 [submodule "vim/vim-json"]
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
-[submodule "vim/bundle/ack.vim"]
-	path = vim/bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
